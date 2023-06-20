@@ -26,13 +26,14 @@ export default function Home() {
 
   const results = () => {
     setresult(
-      (Number(sem1) * Number(credit1) +
-        Number(sem2) * Number(credit2) +
-        Number(sem3) * Number(credit3) +
-        Number(sem4) * Number(credit4) +
-        Number(sem6) * Number(credit6) +
-        Number(sem7) * Number(credit7) +
-        Number(sem8) * Number(credit8)) /
+      ((Number(sem1) * Number(credit1)) +
+        (Number(sem2) * Number(credit2)) +
+        (Number(sem3) * Number(credit3)) +
+        (Number(sem4) * Number(credit4)) +
+        (Number(sem5) * Number(credit5)) +
+        (Number(sem6) * Number(credit6))+
+        (Number(sem7) * Number(credit7)) +
+        (Number(sem8) * Number(credit8))) /
         (Number(credit1) +
           Number(credit2) +
           Number(credit3) +
