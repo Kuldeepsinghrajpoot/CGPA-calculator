@@ -26,14 +26,15 @@ export default function Home() {
 
   const results = () => {
     setresult(
-      ((Number(sem1) * Number(credit1)) +
-        (Number(sem2) * Number(credit2)) +
-        (Number(sem3) * Number(credit3)) +
-        (Number(sem4) * Number(credit4)) +
-        (Number(sem5) * Number(credit5)) +
-        (Number(sem6) * Number(credit6))+
-        (Number(sem7) * Number(credit7)) +
-        (Number(sem8) * Number(credit8))) /
+      (
+        (Number(sem1) * Number(credit1) +
+          Number(sem2) * Number(credit2) +
+          Number(sem3) * Number(credit3) +
+          Number(sem4) * Number(credit4) +
+          Number(sem5) * Number(credit5) +
+          Number(sem6) * Number(credit6) +
+          Number(sem7) * Number(credit7) +
+          Number(sem8) * Number(credit8)) /
         (Number(credit1) +
           Number(credit2) +
           Number(credit3) +
@@ -42,6 +43,7 @@ export default function Home() {
           Number(credit6) +
           Number(credit7) +
           Number(credit8))
+      ).toFixed(2)
     );
   };
 
@@ -55,8 +57,8 @@ export default function Home() {
           alt="icon"
         ></Img> */}
       </div>
-      <div className="grid   place-items-center space-y-3 h-screen    mx-auto md:h-screen lg:py-0">
-        <div className="md:w-full h-max  content-center w-72  mt-10 md:5 mb-10  bg-white rounded-lg shadow dark:border md:mt-5 xl:max-w-4xl sm:w-80  dark:bg-gray-800 dark:border-gray-700">
+      <div className="grid   place-items-center space-y-3 h-screen   mx-auto md:h-screen lg:py-0">
+        <div className="md:w-full max-h-fit  content-center w-72  required:md:mb-6  required:mb-10   mt-10  bg-white rounded-lg shadow dark:border md:mt-5 xl:max-w-4xl sm:w-80  dark:bg-gray-800 dark:border-gray-700">
           <div className=" space-x-6   md:space-y-4 sm:p-10">
             <h1 className="text-xl   pt-5 md:pt-1 text-center  text- font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Average CGPA Calculator
@@ -357,12 +359,17 @@ export default function Home() {
               >
                 Get
               </button>
-              <div className="md:w-96 w-32 dark:text-white">
-                Result {result === NaN ? "" : result || ""}
+              <div className="md:w-96 w-44 dark:text-white">
+                CGPA : {!isNaN(result) ? result : ""} <br />
+                Percentage :{" "}
+                {!isNaN(result) ?((result * 10)===0?"":(result*10).toFixed(2)):" "}
               </div>
             </div>
           </div>
+          <br />
         </div>
+        <br />
+        <div className=" text-lightblue">Kuldeep & Utkarsh</div>
       </div>
     </>
   );
