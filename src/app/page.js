@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Icon from "./download.png";
-import Img from "next/image";
+import Head from 'next/head'
+import Script from 'next/script'
 export default function Home() {
+
+
+
   const [sem1, setsem1] = useState("");
   const [sem2, setsem2] = useState("");
   const [sem3, setsem3] = useState("");
@@ -50,6 +53,10 @@ export default function Home() {
   // alert(values);
   return (
     <>
+
+
+<meta name="google-site-verification" content="-0vKkFK5Wh5LtKdNBglPi4KxEBbrpmLwrTSFVfke_-c" />
+ 
       <div className="grid   place-items-center space-y-3 top-4">
         {/* <Img
           src={Icon}
@@ -58,10 +65,10 @@ export default function Home() {
         ></Img> */}
       </div>
       <div className="grid   place-items-center space-y-3 h-screen   mx-auto md:h-screen lg:py-0">
-        <div className="md:w-full max-h-fit  content-center w-72  required:md:mb-6  required:mb-10   mt-10  bg-white rounded-lg shadow dark:border md:mt-5 xl:max-w-4xl sm:w-80  dark:bg-gray-800 dark:border-gray-700">
+        <div className="md:w-full max-h-fit  content-center w-72    mt-10  bg-white rounded-lg shadow dark:border md:mt-14 xl:max-w-4xl sm:w-80  dark:bg-gray-800 dark:border-gray-700">
           <div className=" space-x-6   md:space-y-4 sm:p-10">
             <h1 className="text-xl   pt-5 md:pt-1 text-center  text- font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-              Average CGPA Calculator
+            CGPA Average  Calculator
             </h1>
             <div className="space-y-4 md:space-y-6">
               <div className=" grid grid-cols-1 md:grid-cols-4  2xl:grid-cols-4 sm:grid-cols-1 space-y-4 px-6 ">
@@ -72,7 +79,7 @@ export default function Home() {
                     htmlFor="Semester2"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Sem 1
+                    Sem 1 SGPA
                   </label>
                   <input
                     type="Semester2"
@@ -107,7 +114,7 @@ export default function Home() {
                     htmlFor="Semester2"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Sem 2
+                    Sem 2 SGPA
                   </label>
                   <input
                     //  disabled
@@ -143,7 +150,7 @@ export default function Home() {
                     htmlFor="Semester2"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Sem 3
+                    Sem 3 SGPA
                   </label>
                   <input
                     value={sem3}
@@ -178,7 +185,7 @@ export default function Home() {
                     htmlFor="Semester2"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Sem 4
+                    Sem 4 SGPA
                   </label>
                   <input
                     value={sem4}
@@ -213,7 +220,7 @@ export default function Home() {
                     htmlFor="Semester2"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Sem 5
+                    Sem 5 SGPA
                   </label>
                   <input
                     value={sem5}
@@ -248,7 +255,7 @@ export default function Home() {
                     htmlFor="Semester2"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Sem 6
+                    Sem 6 SGPA
                   </label>
                   <input
                     value={sem6}
@@ -283,7 +290,7 @@ export default function Home() {
                     htmlFor="Semester2"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Sem 7
+                    Sem 7 SGPA
                   </label>
                   <input
                     value={sem7}
@@ -318,7 +325,7 @@ export default function Home() {
                     htmlFor="Semester2"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Sem 8
+                    Sem 8 SGPA
                   </label>
                   <input
                     value={sem8}
@@ -359,7 +366,7 @@ export default function Home() {
               >
                 Get
               </button>
-              <div className="md:w-96 w-44 dark:text-white">
+              <div className="md:w-96 w-44 text-black dark:text-white">
                 CGPA : {!isNaN(result) ? result : ""} <br />
                 Percentage :{" "}
                 {!isNaN(result) ?((result * 10)===0?"":(result*10).toFixed(2)):" "}
@@ -368,8 +375,8 @@ export default function Home() {
           </div>
           <br />
         </div>
+        <div className=" text-black">Kuldeep & Utkarsh</div>
         <br />
-        <div className=" text-lightblue">Kuldeep & Utkarsh</div>
       </div>
     </>
   );
